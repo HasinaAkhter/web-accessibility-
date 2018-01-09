@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accessibility</title>
+  </head>
+  <body>
+    <!--However, a screen reader would have to read quite a bit of text here
+        to even figure out what this table was about.
+        We can fix that by adding a caption tag and
+		the caption element should always come after the opening table tag.-->
+    <table summary="Comparison of canned fruit prices and fresh fruit prices.">
+      
+	  <!---It's much easier for a user to read the summary information
+           if they're using a screen reader or a braille display
+           rather than navigate the table and have to figure it out as they go along
+		   The contents of the summary attribute won't actually be displayed on your site,
+           but it could be another opportunity for you to describe the contents of the table
+           to your users-->
+	  
+	  <caption>Fresh Fruit Prices versus Canned Fruit Prices</caption>
+      <tr>
+	    <!--scope attribute will help some screen readers navigate the table-->
+        <th scope="col">Packaging</th>
+        <th scope="col">Peaches</th>
+        <th scope="col">Pears</th>
+        <th scope="col">Apples</th>
+      </tr>
+      <tr>
+        <th scope="row">Canned</th>
+        <td>$1</td>
+        <td>$2</td>
+        <td>$1</td>
+      </tr>
+      <tr>
+        <th scope="row">Fresh</th>
+        <td>$2</td>
+        <td>$3</td>
+        <td>$2</td>
+      </tr>
+    </table>
+  </body>
+</html>
